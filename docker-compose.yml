@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  app:
+    container_name: sc2dashboard
+    image: sc2dashboard:1.1.0
+    ports:
+      - 3000:3000
+    restart: on-failure
