@@ -6,6 +6,7 @@ export class DashboardController {
   constructor(private dashboardService: DashboardService) {}
   @Get()
   index(): any {
-    return this.dashboardService.findAll();
+    return 'dashboard';
+    // return this.dashboardService.findAll();
   }
 }

@@ -5,12 +5,12 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class DashboardService {
-  constructor(
-    @InjectRepository(Dashboard)
-    private readonly dashboardRepository: Repository<Dashboard>,
-  ) {}
-
-  async findAll(): Promise<Dashboard[]> {
-    return await this.dashboardRepository.find();
+  constructor() // @InjectRepository(Dashboard)
+  // private readonly dashboardRepository: Repository<Dashboard>,
+  {}
+  //Promise<Dashboard[]>
+  async findAll(): Promise<string> {
+    return 'dashboardRepository.find()';
+    // return await this.dashboardRepository.find();
   }
 }
