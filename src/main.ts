@@ -4,6 +4,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
+  //test
   const options = new DocumentBuilder()
     .addBearerAuth() // 开启 BearerAuth 授权认证
     .setTitle('Nest zero to one')
