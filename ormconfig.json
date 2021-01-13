@@ -1,0 +1,9 @@
+{
+  "type": "mysql",
+  "host": "db",
+  "port": 3307,
+  "username": "root",
+  "password": "root",
+  "database": "scdashboard",
+  "entities": ["dist/**/*.entity.js"]
+}

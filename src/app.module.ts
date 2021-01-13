@@ -4,8 +4,8 @@ import { AppService } from './app.service';
 import { CatsService } from './cats/cats.service';
 import { CatsModule } from './cats/cats.module';
 import { LoggerMiddleware } from './middleware/logger.middleware';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { TypeOrmModule } from '@nestjs/typeorm';
+// import { DashboardModule } from './dashboard/dashboard.module';
+// import { TypeOrmModule } from '@nestjs/typeorm';
 // DashboardModule, TypeOrmModule.forRoot()
 @Module({
   imports: [CatsModule],

@@ -1,8 +1,27 @@
-version: "3.7"
+version: '3.7'
 services:
   app:
     container_name: sc2dashboard
-    image: sc2dashboard:1.1.0
+    image: sc2dashboard:1.2.0
     ports:
       - 3000:3000
     restart: on-failure
+    depends_on:
+      - db
+
+  db:
+    container_name: mysql_container
+    image: mysql:5.6
+    ports:
+      - 3307:3306
+    # command: ['--default-authentication-plugin=mysql_native_password']
+    restart: on-failure
+    environment:
+      - MYSQL_HOSTNAME=localhost
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=renko
+      - MYSQL_DATABASE=scdashboard
+      - MYSQL_PASSWORD=12345678
+      - TZ=Asia/Shanghai
+    # volumes:
+    #   - ./mysql:/var/lib/mysql5.6
